@@ -49,6 +49,6 @@ If you just want access to the app out of the box, here is the invite link https
 - Implement text-to-audio module
 
 ## 🔗 Contact
-For professional Make.com custom app development, visit [Apex Marketing - Make Custom App Development](https://apexmarketing.co.uk/make-custom-app-development/).
+For professional Make.com custom app development, visit [Apex Marketing - Make Custom App Development](https://apexmarketing.co.uk/make-custom-app-development/) and fill in the form on my website.
 
-For custom implementations or if you need help building apps, reach out to me at [rollo@apexmarketing.co.uk](mailto:rollo@apexmarketing.co.uk).
+Or alternatively reach out to me at [rollo@apexmarketing.co.uk](mailto:rollo@apexmarketing.co.uk).
