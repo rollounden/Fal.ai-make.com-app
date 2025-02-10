@@ -1,0 +1,33 @@
+[
+    {
+        "name": "images",
+        "type": "array",
+        "label": "Generated Images",
+        "spec": [
+            {
+                "name": "url",
+                "type": "text",
+                "label": "Image URL"
+            },
+            {
+                "name": "content_type",
+                "type": "text",
+                "label": "Content Type"
+            }
+        ]
+    },
+    {
+        "name": "seed",
+        "type": "integer",
+        "label": "Seed Used"
+    },
+    {
+        "name": "has_nsfw_concepts",
+        "type": "array",
+        "label": "NSFW Detection Results",
+        "spec": {
+            "type": "boolean",
+            "label": "Contains NSFW Content"
+        }
+    }
+]
