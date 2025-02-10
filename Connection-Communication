@@ -1,0 +1,31 @@
+{
+    "communication": {
+        "url": "/",
+        "method": "POST",
+        "body": {
+            "prompt": "Test connection"
+        },
+        "response": {
+            "valid": {
+                "condition": "{{body.request_id != null}}"
+            },
+            "error": {
+                "message": "[{{statusCode}}] {{ifempty(body.error, 'Authentication failed')}}"
+            }
+        },
+        "log": {
+            "sanitize": [
+                "request.headers.authorization"
+            ]
+        }
+    },
+    "parameters": [
+        {
+            "name": "apiKey",
+            "type": "password",
+            "label": "FAL API Key",
+            "required": true,
+            "help": "Your FAL API key. You can find this in your FAL dashboard."
+        }
+    ]
+}
