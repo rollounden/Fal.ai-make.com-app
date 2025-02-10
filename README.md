@@ -3,6 +3,8 @@
 ## 📝 Description
 A custom app for Make.com that integrates with Fal.AI to generate AI-powered images. This repository provides a step-by-step guide to setting up and expanding the app.
 
+If you just want access to the app out of the box, here is the invite link https://www.make.com/en/hq/app-invitation/2d3f5141f8c158e9c6b1d0c9007917b3
+
 ## 🚀 Features
 - AI image generation using Fal.AI
 - Custom API integration with Make.com
