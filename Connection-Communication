@@ -1,6 +1,6 @@
 {
     "communication": {
-        "url": "/",
+        "url": "/{{parameters.model}}",
         "method": "POST",
         "body": {
             "prompt": "Test connection"
@@ -29,3 +29,4 @@
         }
     ]
 }
+
