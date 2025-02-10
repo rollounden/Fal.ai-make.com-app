@@ -1,0 +1,40 @@
+{
+    "url": "/",
+    "method": "POST",
+    "body": {
+        "prompt": "{{parameters.prompt}}",
+        "num_images": "{{parameters.num_images}}",
+        "enable_safety_checker": "{{parameters.enable_safety_checker}}",
+        "safety_tolerance": "{{parameters.safety_tolerance}}",
+        "output_format": "{{parameters.output_format}}",
+        "aspect_ratio": "{{parameters.aspect_ratio}}",
+        "seed": "{{ifempty(parameters.seed, null)}}",
+        "raw": "{{ifempty(parameters.raw, null)}}",
+        "sync_mode": false
+    },
+    "response": {
+        "valid": {
+            "condition": "{{body.images != null}}"
+        },
+        "error": {
+            "message": "[{{statusCode}}] {{ifempty(body.error, body.detail)}}",
+            "400": {
+                "type": "DataError",
+                "message": "Invalid request: {{ifempty(body.error, body.detail)}}"
+            },
+            "401": {
+                "type": "InvalidAccessTokenError",
+                "message": "Authentication failed: {{ifempty(body.error, body.detail)}}"
+            },
+            "429": {
+                "type": "RateLimitError",
+                "message": "Rate limit exceeded: {{ifempty(body.error, body.detail)}}"
+            }
+        },
+        "output": {
+            "images": "{{body.images}}",
+            "seed": "{{body.seed}}",
+            "has_nsfw_concepts": "{{body.has_nsfw_concepts}}"
+        }
+    }
+}
