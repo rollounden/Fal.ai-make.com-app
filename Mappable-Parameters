@@ -1,0 +1,223 @@
+[
+    {
+        "name": "prompt",
+        "type": "text",
+        "label": "Prompt",
+        "required": true,
+        "help": "The prompt to generate an image from"
+    },
+    {
+        "name": "model",
+        "type": "select",
+        "label": "Model",
+        "required": true,
+        "options": [
+            {
+                "label": "FLUX Pro 1.1 Ultra",
+                "value": "fal-ai/flux-pro/v1.1-ultra"
+            },
+            {
+                "label": "FLUX Pro 1.1",
+                "value": "fal-ai/flux-pro/v1.1"
+            },
+            {
+                "label": "FLUX Pro (New)",
+                "value": "fal-ai/flux-pro/new"
+            },
+            {
+                "label": "FLUX Realism",
+                "value": "fal-ai/flux-realism"
+            },
+            {
+                "label": "FLUX General",
+                "value": "fal-ai/flux-general"
+            },
+            {
+                "label": "FLUX Schnell",
+                "value": "fal-ai/flux/schnell"
+            },
+            {
+                "label": "FLUX Dev",
+                "value": "fal-ai/flux/dev"
+            },
+            {
+                "label": "FLUX LoRA",
+                "value": "fal-ai/flux-lora"
+            },
+            {
+                "label": "Aura Flow",
+                "value": "fal-ai/aura-flow"
+            },
+            {
+                "label": "Omnigen v1",
+                "value": "fal-ai/omnigen-v1"
+            },
+            {
+                "label": "Stable Diffusion XL Large",
+                "value": "fal-ai/stable-diffusion-v35-large"
+            },
+            {
+                "label": "Stable Diffusion XL Medium",
+                "value": "fal-ai/stable-diffusion-v35-medium"
+            },
+            {
+                "label": "Fast SDXL",
+                "value": "fal-ai/fast-sdxl"
+            },
+            {
+                "label": "LoRA",
+                "value": "fal-ai/lora"
+            },
+            {
+                "label": "Fast Turbo Diffusion",
+                "value": "fal-ai/fast-turbo-diffusion"
+            },
+            {
+                "label": "Fast LCM Diffusion",
+                "value": "fal-ai/fast-lcm-diffusion"
+            },
+            {
+                "label": "Fast Lightning SDXL",
+                "value": "fal-ai/fast-lightning-sdxl"
+            },
+            {
+                "label": "Hyper SDXL",
+                "value": "fal-ai/hyper-sdxl"
+            },
+            {
+                "label": "Playground v25",
+                "value": "fal-ai/playground-v25"
+            },
+            {
+                "label": "LCM",
+                "value": "fal-ai/lcm"
+            },
+            {
+                "label": "Fooocus",
+                "value": "fal-ai/fooocus"
+            },
+            {
+                "label": "Illusion Diffusion",
+                "value": "fal-ai/illusion-diffusion"
+            },
+            {
+                "label": "Fast SDXL ControlNet Canny",
+                "value": "fal-ai/fast-sdxl-controlnet-canny"
+            },
+            {
+                "label": "Diffusion Edge",
+                "value": "fal-ai/diffusion-edge"
+            },
+            {
+                "label": "Layer Diffusion",
+                "value": "fal-ai/layer-diffusion"
+            },
+            {
+                "label": "Stable Diffusion v1.5",
+                "value": "fal-ai/stable-diffusion-v15"
+            },
+            {
+                "label": "Pixart Sigma",
+                "value": "fal-ai/pixart-sigma"
+            },
+            {
+                "label": "Dreamshaper",
+                "value": "fal-ai/dreamshaper"
+            },
+            {
+                "label": "Realistic Vision",
+                "value": "fal-ai/realistic-vision"
+            },
+            {
+                "label": "Lightning Models",
+                "value": "fal-ai/lightning-models"
+            },
+            {
+                "label": "Stable Cascade",
+                "value": "fal-ai/stable-cascade/sote-diffusion"
+            },
+            {
+                "label": "Kolors",
+                "value": "fal-ai/kolors"
+            }
+        ],
+        "default": "fal-ai/flux-pro/v1.1-ultra"
+    },
+    {
+        "name": "num_images",
+        "type": "integer",
+        "label": "Number of Images",
+        "required": false,
+        "default": 1,
+        "min": 1,
+        "max": 4,
+        "help": "The number of images to generate (default: 1)"
+    },
+    {
+        "name": "enable_safety_checker",
+        "type": "boolean",
+        "label": "Enable Safety Checker",
+        "required": false,
+        "default": true,
+        "help": "If enabled, the safety checker will filter inappropriate content"
+    },
+    {
+        "name": "safety_tolerance",
+        "type": "select",
+        "label": "Safety Tolerance",
+        "required": false,
+        "options": [
+            {"label": "Very Strict", "value": "1"},
+            {"label": "Strict", "value": "2"},
+            {"label": "Moderate", "value": "3"},
+            {"label": "Lenient", "value": "4"},
+            {"label": "Very Lenient", "value": "5"}
+        ],
+        "default": "2",
+        "help": "Safety tolerance level (1 being most strict, 5 being most permissive)"
+    },
+    {
+        "name": "output_format",
+        "type": "select",
+        "label": "Output Format",
+        "required": false,
+        "options": [
+            {"label": "JPEG", "value": "jpeg"},
+            {"label": "PNG", "value": "png"}
+        ],
+        "default": "jpeg",
+        "help": "The format of the generated image"
+    },
+    {
+        "name": "aspect_ratio",
+        "type": "select",
+        "label": "Aspect Ratio",
+        "required": false,
+        "options": [
+            {"label": "21:9", "value": "21:9"},
+            {"label": "16:9", "value": "16:9"},
+            {"label": "4:3", "value": "4:3"},
+            {"label": "1:1", "value": "1:1"},
+            {"label": "3:4", "value": "3:4"},
+            {"label": "9:16", "value": "9:16"},
+            {"label": "9:21", "value": "9:21"}
+        ],
+        "default": "16:9",
+        "help": "The aspect ratio of the generated image"
+    },
+    {
+        "name": "seed",
+        "type": "integer",
+        "label": "Seed",
+        "required": false,
+        "help": "Random seed for image generation. Same seed and prompt will generate the same image"
+    },
+    {
+        "name": "raw",
+        "type": "boolean",
+        "label": "Raw Output",
+        "required": false,
+        "default": false,
+        "help": "Generate less processed, more natural-looking images"
+    }
+]
