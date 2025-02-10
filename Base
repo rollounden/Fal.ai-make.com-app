@@ -1,0 +1,33 @@
+{
+    "baseUrl": "https://fal.run",
+    "headers": {
+        "Authorization": "Key {{connection.apiKey}}",
+        "Content-Type": "application/json"
+    },
+    "response": {
+        "error": {
+            "message": "[{{statusCode}}] {{ifempty(body.error, body.detail)}}",
+            "400": {
+                "type": "DataError",
+                "message": "[{{statusCode}}] Invalid request: {{ifempty(body.error, body.detail)}}"
+            },
+            "401": {
+                "type": "InvalidAccessTokenError",
+                "message": "[{{statusCode}}] Authentication failed: {{ifempty(body.error, body.detail)}}"
+            },
+            "429": {
+                "type": "RateLimitError",
+                "message": "[{{statusCode}}] Rate limit exceeded: {{ifempty(body.error, body.detail)}}"
+            },
+            "500": {
+                "type": "ConnectionError",
+                "message": "[{{statusCode}}] Server error: {{ifempty(body.error, body.detail)}}"
+            }
+        }
+    },
+    "log": {
+        "sanitize": [
+            "request.headers.authorization"
+        ]
+    }
+}
